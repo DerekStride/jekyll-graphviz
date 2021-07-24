@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-graphviz
+
+graphviz:
+  format: jpg
