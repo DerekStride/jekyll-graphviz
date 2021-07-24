@@ -2,4 +2,4 @@
 layout: default
 ---
 
-![Sample GraphViz Image](/assets/img/sample-graph.jpg)
+![Sample GraphViz Image]({{ site.github.url }}/assets/img/sample-graph.jpg)
