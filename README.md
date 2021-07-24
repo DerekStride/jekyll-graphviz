@@ -25,14 +25,25 @@ In your Jekyll site, create a GraphViz files that start with the following lines
 ```
 ---
 ---
+```
+
+
+You need those three dashes in order for Jekyll to recognize it as "convertible". They won't be included in the content
+passed to the GraphViz parser.
+
+Below is an example file that generate the following image:
+
+```dot
+---
+---
 
 digraph X {
   a -> b
 }
 ```
 
-You need those three dashes in order for Jekyll to recognize it as "convertible". They won't be included in the content
-passed to the CoffeeScript compiler.
+![foo](https://user-images.githubusercontent.com/6456191/126874946-81e25b07-fceb-45eb-bef1-5a1d3e79fe37.jpg)
+
 
 ### GraphViz
 
