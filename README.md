@@ -18,7 +18,7 @@ And then add this line to your site's `_config.yml`:
 
 ```yml
 plugins:
-  - jekyll-feed
+  - jekyll-graphviz
 ```
 
 ## Usage
