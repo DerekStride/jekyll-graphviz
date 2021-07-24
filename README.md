@@ -1,5 +1,7 @@
 # Jekyll::Graphviz
 
+[![CI](https://github.com/DerekStride/jekyll-graphviz/actions/workflows/ci.yml/badge.svg)](https://github.com/DerekStride/jekyll-graphviz/actions/workflows/ci.yml) [![Deploy to GitHub Pages](https://github.com/DerekStride/jekyll-graphviz/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/DerekStride/jekyll-graphviz/actions/workflows/gh-pages.yml) [![Publish to rubygems](https://github.com/DerekStride/jekyll-graphviz/actions/workflows/publish-gem.yml/badge.svg)](https://github.com/DerekStride/jekyll-graphviz/actions/workflows/publish-gem.yml)
+
 A GraphViz converter for Jekyll.
 
 ## Installation
