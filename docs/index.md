@@ -2,4 +2,4 @@
 layout: default
 ---
 
-![Sample GraphViz Image]({{ site.github.url }}/graph.jpg)
+![Sample GraphViz Image](https://github.com/DerekStride/jekyll-graphviz/raw/gh-pages/graph.jpg)

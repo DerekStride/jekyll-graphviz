@@ -4,19 +4,20 @@ A GraphViz converter for Jekyll.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your site's Gemfile:
 
 ```ruby
-gem 'jekyll-graphviz'
+group :jekyll_plugins do
+  gem "jekyll-graphviz-dot"
+end
 ```
 
-And then execute:
+And then add this line to your site's `_config.yml`:
 
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install jekyll-graphviz
+```yml
+plugins:
+  - jekyll-feed
+```
 
 ## Usage
 
@@ -44,6 +45,14 @@ digraph X {
 
 ![foo](https://user-images.githubusercontent.com/6456191/126874946-81e25b07-fceb-45eb-bef1-5a1d3e79fe37.jpg)
 
+By default the images will be outputted as an `svg` to change to another [compatible
+type](https://github.com/glejeune/Ruby-Graphviz/blob/c3be805fc5e62ea1326eb9bb3708a807d1178525/lib/graphviz/constants.rb#L47-L92)
+use the `graphviz.format` option in your site's `_config.yml`.
+
+```yml
+graphviz:
+  format: jpg
+```
 
 ### GraphViz
 
