@@ -1,8 +1,6 @@
 # Jekyll::Graphviz
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jekyll/graphviz`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A GraphViz converter for Jekyll.
 
 ## Installation
 
@@ -22,18 +20,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your Jekyll site, create a GraphViz files that start with the following lines:
+
+```
+---
+---
+
+digraph X {
+  a -> b
+}
+```
+
+You need those three dashes in order for Jekyll to recognize it as "convertible". They won't be included in the content
+passed to the CoffeeScript compiler.
+
+### GraphViz
+
+This plugin depends on [ruby-graphviz](https://github.com/glejeune/Ruby-Graphviz) which requires the GraphViz command
+line tool to be installed locally. You can find [Installation Instructions Here](https://graphviz.org/download/).
+
+### Github Pages
+
+To use this plugin with Github pages you'll need to use
+[limjh16/jekyll-action-ts](https://github.com/limjh16/jekyll-action-ts) to setup a custom Github Pages deploy pipeline
+and install GraphViz with [ts-graphviz/setup-graphviz](https://github.com/ts-graphviz/setup-graphviz). Check out this
+repo's [Github Actions
+Workflow](https://github.com/DerekStride/jekyll-graphviz/blob/main/.github/workflows/gh-pages.yml) for an example.
+
+There is an example jekyll site in the [`docs/`](https://github.com/DerekStride/jekyll-graphviz/tree/main/docs) folder
+of this repo.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bundle install` to install dependencies. Then, run `rake test` to run the tests.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jekyll-graphviz. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/jekyll-graphviz/blob/main/CODE_OF_CONDUCT.md).
-
-## Code of Conduct
-
-Everyone interacting in the Jekyll::Graphviz project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/jekyll-graphviz/blob/main/CODE_OF_CONDUCT.md).
