@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-graphviz (0.1.0)
+    jekyll-graphviz-dot (0.1.0)
       ruby-graphviz (~> 1.2)
 
 GEM
@@ -83,7 +83,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   jekyll (~> 4.0)
-  jekyll-graphviz!
+  jekyll-graphviz-dot!
   minitest
   pry-byebug
   rake

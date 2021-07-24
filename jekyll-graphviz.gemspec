@@ -3,7 +3,7 @@
 require_relative "lib/jekyll-graphviz/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-graphviz"
+  spec.name          = "jekyll-graphviz-dot"
   spec.version       = Jekyll::Graphviz::VERSION
   spec.authors       = ["derekstride"]
   spec.email         = ["djgstride@gmail.com"]
