@@ -7,7 +7,7 @@ on:
       - v*
 
 jobs:
-  jekyll:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: 📂 setup
