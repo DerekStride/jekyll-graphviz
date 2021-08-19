@@ -31,6 +31,12 @@ class Jekyll::GraphvizTest < Minitest::Test
     assert_equal(Encoding::ASCII_8BIT, output.encoding)
   end
 
+  def test_files_are_cached
+    content = "digraph x { a -> b }"
+    converter.convert(content)
+    assert(converter.cache.key?(content))
+  end
+
   def converter(opts = {})
     config = Jekyll::Configuration::DEFAULTS.merge(opts)
     @converter ||= Jekyll::Converters::Graphviz.new(config)
