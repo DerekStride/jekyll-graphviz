@@ -6,9 +6,12 @@ module Jekyll
       safe true
       priority :low
 
+      attr_accessor :cache
+
       def setup
         require 'ruby-graphviz'
         @format = (@config.dig("graphviz", "format") || :svg).to_sym
+        @cache = {}
         @setup = true
       end
 
@@ -23,7 +26,7 @@ module Jekyll
 
       def convert(content)
         setup unless @setup
-        GraphViz.parse_string(content).output(@format => String)
+        @cache[content] ||= GraphViz.parse_string(content).output(@format => String)
       end
     end
   end
